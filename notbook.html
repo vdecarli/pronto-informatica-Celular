@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto Informática</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/conteudo.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   
+    <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+    
+            .cabecalho {
+                /* background: linear-gradient(240deg, #00c9be, #008dc6, #005096, #1e2d68, #312258, #381847, #3a0e37);*/
+            }
+    
+            .box-logo {
+                position: fixed;
+                background: linear-gradient(240deg, #00c9be, #008dc6, #005096, #1e2d68, #312258, #381847, #3a0e37);
+                /* max-width: 1200px;*/
+                width: 100%;
+            }
+    
+    
+            .titulo {
+                display: flex;
+                align-items: center;
+            }
+    
+            .menu {
+                display: none;
+            }
+    
+            @media (min-width:760px) {
+                .menu {
+                    display: block;
+                }
+            }
+    
+            .menu ul {
+                display: flex;
+                list-style: none;
+            }
+    
+            .menu-items {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            @media (min-width: 760px) {
+                .menu-items {
+                    flex-direction: row;
+                }
+            }
+    
+            .item-menu {
+                list-style: none;
+                padding: 10px;
+                display: inline-block;
+                color: #ffffff;
+            }
+    
+            .item-menu:hover {
+                color: rgb(17, 3, 78);
+                background-color: #008398;
+            }
+        .sobre-nos {
+            background-color: #7BB4C3;
+            text-align: center;
+            width: 60%;
+            font-size: 20px;
+        }
+
+        .sobre-nos-vazia {
+            background-color: #7BB4C3;
+            width: 20%;
+        }
+
+        .box-sobre-nos {
+            background-color: #7BB4C3;
+            display: flex;
+            flex-direction: row;
+            padding: 50px;
+        }
+
+        .computadores-info {
+            background-color: #131174;
+            color: white;
+            text-shadow: black 0.1em 0.1em 0.2em;
+            font-size: 35px;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .computadores {
+            text-align: center;
+            width: 40%;
+            height: 30%;
+            text-align: center;
+        }
+
+        .computador-dados {
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; /*center , space-beween*/
+            flex-wrap: wrap;
+            padding: 50px;
+        }
+
+        .tabela {
+            padding: 15px;
+            width: 100%;
+            margin: 0 auto;
+            border: #030457 1px solid;
+
+        }
+
+        .tabela th {
+            background-color: #030457;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .tabela td {
+            text-align: center;
+        }
+        .tabela td:nth-child(2) {
+            text-align: left;
+        }
+
+        .tabela tr:nth-child(odd) {
+            background-color: lightblue;
+        }
+
+        .tabela tr:hover {
+            background-color: lightgray;
+        }
+        .box-tabela{
+            padding: 15px;
+           margin-left: 10px;
+        }
+        .rodape-contato-texto1 {
+            color: rgb(13, 15, 97);
+            text-shadow: black 0.1em 0.1em 0.2em;
+            margin: 35px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--cabeçalho do site-->
+    <header class="cabecalho">
+            <div class="box-logo">
+                <div class="titulo">
+                    <img src="imagens/Cartão1a.jpg.png">
+                </div>
+                <span class="mostrar-menu">
+                    <a href="#" onclick="mostrarMenu()">Menu</a>
+                </span>
+                <nav class="menu">
+                    <ul class="menu-items">
+                        <li><a href="index.html" class="item-menu">Pagina Inicial</a></li>
+                        <li><a href="sobrenos.html" class="item-menu">Sobre Nós</a></li>
+                        <li><a href="notbook.html" class="item-menu">Notebook</a></li>
+                        <li><a href="computadores.html" class="item-menu">Computadores</a></li>
+                        <li><a href="empressas.html" class="item-menu">Para Empressas</a></li>
+                        <li><a href="serviços.html" class="item-menu">Serviços</a></li>
+                        <li><a href="sistemas.html" class="item-menu">Gdoor Sistemas</a></li>
+                        <li><a href="contato.html" class="item-menu">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <script>
+            let menuAtivo = false;
+            function mostrarMenu() {
+                if (menuAtivo) {
+                    document.querySelector('.menu').style.display = 'none';
+                    menuAtivo = false;
+                } else {
+                    document.querySelector('.menu').style.display = 'flex';
+                    menuAtivo = true;
+                }
+            }
+        </script>
+    <main>
+        <div class="box-sobre-nos">
+            <div class="sobre-nos-vazia"></div>
+            <div class="sobre-nos">
+                    <br><br><br><br><br>
+                <h2>
+                    <p>Manutenção de Notebooks</p>
+                    <p>Saiba o que podemos fazer pelo seu Notebook</p>
+                </h2>
+                <br>
+                <p>A Pronto Informática é especializada em manutenção de notebooks e está totalmente capacitada para o seu
+                    desafio. Estamos no mercado desde 2010 e sempre em constante capacitação para oferecer a você e sua empresa
+                    sempre o melhor atendimento e soluções em informática.
+                </p>
+                <br>
+            </div>
+            <div class="sobre-nos-vazia"> </div>
+        </div>
+        <div class="computadores-info">
+            <img src="imagens/positivo.png">
+            <p>Faça um orçamento online com o nosso time de especialistas.</p>
+            <p> entre contato agora mesmo.</p>
+            <br>
+        </div>
+        <div class="box-sobre-nos">
+            <div class="sobre-nos-vazia"></div>
+            <div class="sobre-nos">
+                <br>
+                <h2>
+                    <p>Manutenção de Notebooks</p>
+                </h2>
+                <h2>
+                    <p>Traga seu Notebook para a Pronto Informática</p>
+                </h2>
+                <br>
+                <p>Veja algums dos nossos Serviços realizados</p>
+                <br>
+            </div>
+            <div class="sobre-nos-vazia"> </div>
+        </div>
+        <div class="computador-dados">
+            <div><br>
+                <img src="imagens/notbook.jpeg" width="100%" height="70%">
+            </div>
+            <div class="box-tabela">
+                <table class="tabela">
+                    <tr>
+                        <th></th>
+                        <th>Tabele de Preços de Serviços</th>
+                        <th></th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Reparo de placa mãe de notebook</td>
+                        <td>R$ 200,00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Reparo em fontes de notebooks</td>
+                        <td>R$ 80,00</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Troca de teclado de notebooks</td>
+                        <td>R$ 50,00</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Troca de tela quebrada de notebook</td>
+                        <td>R$ 30,00</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Instalação e remoção de hardwares e periféricos</td>
+                        <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Instalação de programas, jogos e aplicativos</td>
+                        <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Limpeza do sistema e formatação com backup</td>
+                        <td>R$ 120,00</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Recuperação de fotos e dados de HD formatado</td>
+                        <td>R$ 200,00</td>
+                    </tr>
+                </table>
+                <p class="rodape-contato-texto1">Atendemos também em domicílio</p>
+            </div>
+        </div>
+    </main>
+
+    <!--Rodape-->
+    <div class="rodape">
+        <div class="rodape-contato">
+            <div class="rodape-contato-texto">
+                <p>ONDE ESTAMOS</p>
+                <p>Residencial : Barão do Melgaço 1</p>
+                <p>Vilhena-Ro</p>
+            </div>
+            <div class="vazia-rodape-contato"></div>
+            <div class="rodape-contato-texto">
+                <p>CONTATO</p>
+                <img src="imagens/baseline-call-24px.svg">
+                <a href="tel:+55-69-98402-49-52" class="email">(69) 98402-4952</a><br>
+                <a href="prontoassitencia@gmail.com" class="email">prontoassistencia@gmail.com</a><br>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

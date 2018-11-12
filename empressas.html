@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto Informática</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/conteudo.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cabecalho {
+            /* background: linear-gradient(240deg, #00c9be, #008dc6, #005096, #1e2d68, #312258, #381847, #3a0e37);*/
+        }
+
+        .box-logo {
+            position: fixed;
+            background: linear-gradient(240deg, #00c9be, #008dc6, #005096, #1e2d68, #312258, #381847, #3a0e37);
+            /* max-width: 1200px;*/
+            width: 100%;
+        }
+
+
+        .titulo {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        @media (min-width:760px) {
+            .menu {
+                display: block;
+            }
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu-items {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 760px) {
+            .menu-items {
+                flex-direction: row;
+            }
+        }
+
+        .item-menu {
+            list-style: none;
+            padding: 10px;
+            display: inline-block;
+            color: #ffffff;
+        }
+
+        .item-menu:hover {
+            color: rgb(17, 3, 78);
+            background-color: #008398;
+        }
+
+        .corpo {
+            background-color: #7BB4C3;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+        }
+
+        .sobre-nos {
+            background-color: #7BB4C3;
+            text-align: center;
+            width: 50%;
+            font-size: 20px;
+
+        }
+
+        .box-sobre-nos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60%;
+            height: 50%;
+            font-size: 20px;
+        }
+
+        .empressa-pronto {
+            text-align: center;
+            width: 60%;
+            padding: 15px;
+        }
+
+        .sobre-nos-vazia {
+            background-color: #7BB4C3;
+            width: 25%;
+        }
+
+        .sub-titulo-empressa {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 35px;
+
+        }
+
+        .img-sub-titulo-empressa {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .box-img-sub-titulo-empressa {
+            display: flex;
+            flex-direction: row;
+            flex-direction: row;
+            justify-content: space-between; /*center , space-beween*/
+            flex-wrap: wrap;
+            padding: 15px;
+            
+        }
+
+        .empressa>ul>li {
+            text-align: center;
+
+        }
+
+        .computadores-info {
+            background-color: #131174;
+            color: white;
+            text-shadow: black 0.1em 0.1em 0.2em;
+            font-size: 35px;
+            text-align: center;
+            width: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--cabeçalho do site-->
+    <header class="cabecalho">
+        <div class="box-logo">
+            <div class="titulo">
+                <img src="imagens/Cartão1a.jpg.png">
+            </div>
+            <span class="mostrar-menu">
+                <a href="#" onclick="mostrarMenu()">Menu</a>
+            </span>
+            <nav class="menu">
+                <ul class="menu-items">
+                    <li><a href="index.html" class="item-menu">Pagina Inicial</a></li>
+                    <li><a href="sobrenos.html" class="item-menu">Sobre Nós</a></li>
+                    <li><a href="notbook.html" class="item-menu">Notebook</a></li>
+                    <li><a href="computadores.html" class="item-menu">Computadores</a></li>
+                    <li><a href="empressas.html" class="item-menu">Para Empressas</a></li>
+                    <li><a href="serviços.html" class="item-menu">Serviços</a></li>
+                    <li><a href="sistemas.html" class="item-menu">Gdoor Sistemas</a></li>
+                    <li><a href="contato.html" class="item-menu">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
+        let menuAtivo = false;
+        function mostrarMenu() {
+            if (menuAtivo) {
+                document.querySelector('.menu').style.display = 'none';
+                menuAtivo = false;
+            } else {
+                document.querySelector('.menu').style.display = 'flex';
+                menuAtivo = true;
+            }
+        }
+    </script>
+    <main>
+        <div class="corpo">
+            <div class="box-sobre-nos">
+                <br><br><br><br><br><br><br>
+                <h2>
+                    <p>Contrato de Manutenção para Empresas</p>
+                    <p>Mantenha os equipamentos da sua empresa sempre ativos</p>
+                </h2>
+                <br>
+                <p>A Pronto Informática oferece manutenção em informática para pequenas e médias empresas proporcionando
+                    um ótimo custo benefício. O início da manutenção é efetuado pela identificação do ambiente de TI, incluindo
+                    hardware, software e rede, passando pela administração da rede de computadores até o suporte técnico
+                    da sua informática. Após a avaliação inicial, nosso técnico oferece a melhor solução para o pleno funcionamento
+                    da sua empresa.
+                </p>
+                <br>
+                <br>
+
+            </div>
+        </div>
+        <div class="computadores-info">
+            <img src="imagens/positivo.png">
+            <p>Faça um orçamento online com o nosso time de especialistas.</p>
+            <p> entre contato agora mesmo.</p>
+            <br>
+        </div>
+        <div class="sub-titulo-empressa">
+            <br>
+            <p>Veja os Benefícios do contrato de manutenção para empresas
+                <p> da Pronto Informática</p>
+                <br>
+        </div>
+        <div class="box-img-sub-titulo-empressa">
+            <div class="img-sub-titulo-empressa">
+                <img src="imagens/empressa.jpeg">
+            </div>
+            <div class="img-sub-titulo-empressa">
+                <ul>
+                    <li>Manutenção corretiva e preventiva</li>
+                    <li>Resolução de problemas de hardware e software</li>
+                    <li>Backup, formatação e reinstalação de equipamentos</li>
+                    <li>Manutenção de estações de trabalho (notebooks e desktops)</li>
+                    <li>Suporte e manutenção a servidores</li>
+                    <li>Melhoria de desempenho (problemas com lentidões e travamentos)</li>
+                    <li>Suporte à infraestrutura de redes locais</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!--Rodape-->
+    <div class="rodape">
+        <div class="rodape-contato">
+            <div class="rodape-contato-texto">
+                <p>ONDE ESTAMOS</p>
+                <p>Residencial : Barão do Melgaço 1</p>
+                <p>Vilhena-Ro</p>
+            </div>
+            <div class="vazia-rodape-contato"></div>
+            <div class="rodape-contato-texto">
+                <p>CONTATO</p>
+                <img src="imagens/baseline-call-24px.svg">
+                    <a href="tel:+55-69-98402-49-52" class="email">(69) 98402-4952</a><br>
+                    <a href="prontoassitencia@gmail.com" class="email">prontoassistencia@gmail.com</a><br>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto Informática</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/conteudo.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+    
+            .cabecalho {
+                /* background: linear-gradient(240deg, #00c9be, #008dc6, #005096, #1e2d68, #312258, #381847, #3a0e37);*/
+            }
+    
+            .box-logo {
+                position: fixed;
+                background: linear-gradient(240deg, #00c9be, #008dc6, #005096, #1e2d68, #312258, #381847, #3a0e37);
+                /* max-width: 1200px;*/
+                width: 100%;
+            }
+    
+    
+            .titulo {
+                display: flex;
+                align-items: center;
+            }
+    
+            .menu {
+                display: none;
+            }
+    
+            @media (min-width:760px) {
+                .menu {
+                    display: block;
+                }
+            }
+    
+            .menu ul {
+                display: flex;
+                list-style: none;
+            }
+    
+            .menu-items {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            @media (min-width: 760px) {
+                .menu-items {
+                    flex-direction: row;
+                }
+            }
+    
+            .item-menu {
+                list-style: none;
+                padding: 10px;
+                display: inline-block;
+                color: #ffffff;
+            }
+    
+            .item-menu:hover {
+                color: rgb(17, 3, 78);
+                background-color: #008398;
+            }
+        .rodape-lyout-contato {
+            background-color: #7BB4C3;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; /*center , space-beween*/
+            flex-wrap: wrap;
+        }
+
+        .cli {
+            color: #0f0547;
+            font-size: 20px;
+            padding: 30px;
+            width: 80%;
+        }
+
+        .form-contato {
+            color: #fff;
+            text-align: left;
+            margin: auto 10px;
+            width: 30%;
+            height: 40%;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--cabeçalho do site-->
+    <header class="cabecalho">
+            <div class="box-logo">
+                <div class="titulo">
+                    <img src="imagens/Cartão1a.jpg.png">
+                </div>
+                <span class="mostrar-menu">
+                    <a href="#" onclick="mostrarMenu()">Menu</a>
+                </span>
+                <nav class="menu">
+                    <ul class="menu-items">
+                        <li><a href="index.html" class="item-menu">Pagina Inicial</a></li>
+                        <li><a href="sobrenos.html" class="item-menu">Sobre Nós</a></li>
+                        <li><a href="notbook.html" class="item-menu">Notebook</a></li>
+                        <li><a href="computadores.html" class="item-menu">Computadores</a></li>
+                        <li><a href="empressas.html" class="item-menu">Para Empressas</a></li>
+                        <li><a href="serviços.html" class="item-menu">Serviços</a></li>
+                        <li><a href="sistemas.html" class="item-menu">Gdoor Sistemas</a></li>
+                        <li><a href="contato.html" class="item-menu">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <script>
+            let menuAtivo = false;
+            function mostrarMenu() {
+                if (menuAtivo) {
+                    document.querySelector('.menu').style.display = 'none';
+                    menuAtivo = false;
+                } else {
+                    document.querySelector('.menu').style.display = 'flex';
+                    menuAtivo = true;
+                }
+            }
+        </script>
+    <div class="rodape-lyout-contato">
+        <div class="representante-vazio"></div>
+        <div>
+            <br><br><br><br><br><br><br><br>
+            <h2>
+                <p class="cadcli">100% de desconto!</p>
+            </h2>
+            <br>
+            <p class="cli">Marque um atendimento conosco e receba um desconto de 100% na taxa de diagnóstico.</p>
+            <br>
+            <h3 class="cadcli">Agende Já Sua Visita</h3>
+        </div>
+        <form method="post" action="" class="form-contato">
+            <br><br><br><br><br><br><br><br>
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" required name=nome placeholder="Insira seu Nome completo" class="campo-nome">
+            
+            <label for="cpf">CPF</label>
+            <input type="number" id="cpf" class="campo-cpf">
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" class="campo-endereco">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" class="campo-telefone">
+
+            <label for="email">Email</label>
+            <input type="email" id="emailid"required name=email placeholder="fulano@mail.com" name="email" class="campo-email" />
+
+            <label>Mensagem</label>
+            <textarea name="mensagem" rows=5 cols=55></textarea>
+
+            <input type="submit" value="Enviar" class="boton">
+        </form>
+
+    </div>
+    </div>
+    </main>
+
+    <!--Rodape-->
+    <div class="rodape">
+        <div class="rodape-contato">
+            <div class="rodape-contato-texto">
+                <p>ONDE ESTAMOS</p>
+                <p>Residencial : Barão do Melgaço 1</p>
+                <p>Vilhena-Ro</p>
+            </div>
+            <div class="vazia-rodape-contato"></div>
+            <div class="rodape-contato-texto">
+                <p>CONTATO</p>
+                <img src="imagens/baseline-call-24px.svg">
+                    <a href="tel:+55-69-98402-49-52" class="email">(69) 98402-4952</a><br>
+                    <a href="prontoassitencia@gmail.com" class="email">prontoassistencia@gmail.com</a><br>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

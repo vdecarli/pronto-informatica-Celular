@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto Informática</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/conteudo.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+    
+            .cabecalho {
+                /* background: linear-gradient(240deg, #00c9be, #008dc6, #005096, #1e2d68, #312258, #381847, #3a0e37);*/
+            }
+    
+            .box-logo {
+                position: fixed;
+                background: linear-gradient(240deg, #00c9be, #008dc6, #005096, #1e2d68, #312258, #381847, #3a0e37);
+                /* max-width: 1200px;*/
+                width: 100%;
+            }
+    
+    
+            .titulo {
+                display: flex;
+                align-items: center;
+            }
+    
+            .menu {
+                display: none;
+            }
+    
+            @media (min-width:760px) {
+                .menu {
+                    display: block;
+                }
+            }
+    
+            .menu ul {
+                display: flex;
+                list-style: none;
+            }
+    
+            .menu-items {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            @media (min-width: 760px) {
+                .menu-items {
+                    flex-direction: row;
+                }
+            }
+    
+            .item-menu {
+                list-style: none;
+                padding: 10px;
+                display: inline-block;
+                color: #ffffff;
+            }
+    
+            .item-menu:hover {
+                color: rgb(17, 3, 78);
+                background-color: #008398;
+            }
+        .computadores-info {
+            background-color: #131174;
+            color: white;
+            text-shadow: black 0.1em 0.1em 0.2em;
+            font-size: 35px;
+            text-align: center;
+            width: 100%;
+        }
+        .box-serviço {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; /*center , space-beween*/
+            flex-wrap: wrap;
+            background-color: #7BB4C3;
+            text-align: center;
+            width: 100%;
+        }
+
+        .box-serviço-texto {
+            padding: 10px;
+            width: 40%;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--cabeçalho do site-->
+    <header class="cabecalho">
+            <div class="box-logo">
+                <div class="titulo">
+                    <img src="imagens/Cartão1a.jpg.png">
+                </div>
+                <span class="mostrar-menu">
+                    <a href="#" onclick="mostrarMenu()">Menu</a>
+                </span>
+                <nav class="menu">
+                    <ul class="menu-items">
+                        <li><a href="index.html" class="item-menu">Pagina Inicial</a></li>
+                        <li><a href="sobrenos.html" class="item-menu">Sobre Nós</a></li>
+                        <li><a href="notbook.html" class="item-menu">Notebook</a></li>
+                        <li><a href="computadores.html" class="item-menu">Computadores</a></li>
+                        <li><a href="empressas.html" class="item-menu">Para Empressas</a></li>
+                        <li><a href="serviços.html" class="item-menu">Serviços</a></li>
+                        <li><a href="sistemas.html" class="item-menu">Gdoor Sistemas</a></li>
+                        <li><a href="contato.html" class="item-menu">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <script>
+            let menuAtivo = false;
+            function mostrarMenu() {
+                if (menuAtivo) {
+                    document.querySelector('.menu').style.display = 'none';
+                    menuAtivo = false;
+                } else {
+                    document.querySelector('.menu').style.display = 'flex';
+                    menuAtivo = true;
+                }
+            }
+        </script>
+    <div class="box-serviço">
+        <div class="box-serviço-texto">
+                <br><br><br><br><br><br>
+            <h2>
+                <p>Serviços de Hardware/Software</p>
+            </h2>
+            <br>
+            <p>Manutenção preventiva Manutenção corretiva Troca de peças Instalação de novas peças Instalação de impressora
+                Instalação de sistema operacional Windows (com programas) Instalação de sistema operacional Linux Instalação
+                de sistema operacional Windows Instalação de programas Retirada de Vírus, Spyware e spam Instalação de antivírus
+            </p>
+            <br>
+            <br>
+        </div>
+        <div class="box-serviço-texto">
+                    <br><br><br><br><br><br>
+            <h1>Serviços de Redes</h1>
+            <br>
+            <p> Instalação de cabeamento (Cabos, RJ-45 fêmea, canaletas, etc.) Configuração de computadores na rede Conserto
+                de ponto de rede Conserto de configuração de computador na rede Instalação de impressora na rede Compartilhamento
+                de impressora em rede Instalação de rede sem fio Configuração de rede sem fio Roteamento de modens ADSL
+
+            </p>
+        </div>
+    </div>
+
+    <div class="computadores-info">
+        <img src="imagens/positivo.png">
+        <p>Faça um orçamento online com o nosso time de especialistas.</p>
+        <p> entre contato agora mesmo.</p>
+        <br>
+    </div>
+    <div class="box-serviço">
+        <div class="box-vazia"></div>
+        <div class="box-serviço-texto">
+            <h1>Suporte Informática</h1>
+            <p>Oferecemos <strong>suporte corporativo em informática</strong> para médias e grandes empresas. Nossos serviços
+                aumentam a produtividade do seu negócio, evitando perda de tempo dos seus funcionários com problemas de informática.
+                Proporcionamos um total gerenciamento em TI com um ambiente de serviço mais estável. O nosso suporte técnico
+                previne problemas comuns antes que eles ocorram, poupando tempo e dinheiro da sua empresa.</p>
+            <p>Entendemos que cada empresa é única. Por isso, visamos entender o negócio de cada cliente, a fim de desenvolver
+                uma solução específica para permitir um melhor gerenciamento em TI. Nosso diferencial consiste na credibilidade
+                com excelência em atendimento e tecnologia.</p>
+            <p>Administramos todas as tarefas de informática da sua empresa, desde o monitoramento da sua rede, prevenindo
+                invasões ao suporte de usuários.</p>
+            <p>Evitamos ou resolvemos problemas de computadores inoperantes ou de baixo desempenho venham a reduzir a produção
+                do seus funcionários. Você pode ter um suporte técnico que seja seu parceiro, oferecendo níveis de serviço
+                de acordo com a sua urgência de atendimento.
+        </div>
+        <div class="box-serviço-texto">
+            <br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z"/></svg>
+            <h2>Suporte Empresarial</h2>
+            <p>Administramos todas as tarefas de informática da sua empresa.</p>
+            <br>
+            <img src="imagens/contrato.png">
+            <h2>Contratos de Suporte e Manutenção</h2>
+            <p>Os melhores profissionais especializados em Windows, Mac ou Wi-Fi em sua residência.</p>
+            <br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+            <h2>Soluções de Backup</h2>
+            <p>Atendimentos emergenciais ou programados pelos clientes.</p>
+            <br>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><path clip-path="url(#b)" fill="#010101" d="M20 7h-4V5c0-.55-.22-1.05-.59-1.41C15.05 3.22 14.55 3 14 3h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM10 5h4v2h-4V5zm1 13.5l-1-1 3-3-3-3 1-1 4 4-4 4z"/></svg>
+            <h2>Soluções para Home Office</h2>
+            <p>Melhor maneiro de expandir seus negócios. Locação de Servidores, Backup e Firewall.</p>
+        </div>
+        <div class="box-vazia"></div>
+    </div>
+
+    <!--Rodape-->
+    <div class="rodape">
+        <div class="rodape-contato">
+            <div class="rodape-contato-texto">
+                <p>ONDE ESTAMOS</p>
+                <p>Residencial : Barão do Melgaço 1</p>
+                <p>Vilhena-Ro</p>
+            </div>
+            <div class="vazia-rodape-contato"></div>
+            <div class="rodape-contato-texto">
+                <p>CONTATO</p>
+                <img src="imagens/baseline-call-24px.svg">
+                <a href="tel:+55-69-98402-49-52" class="email">(69) 98402-4952</a><br>
+                <a href="prontoassitencia@gmail.com" class="email">prontoassistencia@gmail.com</a><br>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

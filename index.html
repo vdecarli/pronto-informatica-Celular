@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto Informática</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+
+    <style>
+     * {
+            margin: 0;
+            padding: 0;
+        }
+
+    .cabecalho {
+            /* background: linear-gradient(240deg, #00c9be, #008dc6, #005096, #1e2d68, #312258, #381847, #3a0e37);*/
+        }
+
+    .box-logo {
+            position: fixed;
+            background: linear-gradient(240deg, #00c9be, #008dc6, #005096, #1e2d68, #312258, #381847, #3a0e37);
+            /* max-width: 1200px;*/
+            width: 100%;
+        }
+
+
+    .titulo {
+            display: flex;
+            align-items: center;
+        }
+
+    .menu {
+            display: none;
+        }
+
+     @media (min-width:760px) {
+        .menu {
+                display: block;
+            }
+        }
+
+    .menu ul {
+            display: flex;
+            list-style: none;
+        }
+
+    .menu-items {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+     @media (min-width: 760px) {
+        .menu-items {
+                flex-direction: row;
+            }
+        }
+
+    .item-menu {
+            list-style: none;
+            padding: 10px;
+            display: inline-block;
+            color: #ffffff;
+        }
+
+    .item-menu:hover {
+            color: rgb(17, 3, 78);
+            background-color: #008398;
+        }
+    .titulo-solucoes{
+        font-size: 27px;
+        text-align: center;
+        flex-direction: row;
+        justify-content:space-evenly;
+        font-family: 'Slabo 27px', serif;
+        }
+    .tipo-serv{
+        font-size: 16px;
+        color: #a9a4a4;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        }
+    .capa-solucoes{
+        border-radius: 5px;
+        display: flex;
+        margin: 7px auto;  
+        }
+    .capa-solucoes :hover{
+            font-size: 15px;
+        }
+    .solucoes-conteiner{
+         display: flex;
+        flex-direction: row;/* column*/
+        justify-content: flex-start; /*center , space-beween*/
+        flex-wrap: wrap;
+        padding: 30px;
+         margin: 15px;
+        }
+    .box{
+        background-color: rgb(44, 120, 150);
+        color:white;
+        text-align: center;
+        }
+    .box-solucoes{
+        box-sizing: border-box;
+        /*background-color: rgb(15, 7, 7);*/
+        width: 300px;
+        padding: 10px;
+        }
+    .series >div {width: 200px height:80px;}    
+    .inicio{
+        background-color: #64a5a2;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /*center , space-beween*/
+        flex-wrap: wrap;
+        }
+    .texto-inicio{
+            width: 40%;
+            text-align: center;
+            padding: 30px;
+        }
+    .necessidade{
+            display: flex;
+            flex-direction: column;
+            background-color: #5c9ea0;
+            
+        }
+    .box-serv-imagem{
+        padding: 10px;
+        
+    } 
+    .texto-inicio2{
+            width: 40%;
+            padding: 20px;
+            text-align: left;
+        }
+    .box-serv-imagem3{
+        padding: 10px;
+        
+    } 
+    .texto-inicio3{
+            width: 40%;
+            padding: 20px;
+            text-align: left;
+    }
+    .inicio3{
+        background-color: #5a6c72;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /*center , space-beween*/
+        flex-wrap: wrap;
+    }
+    .rodape-contato{
+    background-color: #F9730B;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    width: 98%;
+}
+.vazia2{
+    width: 70%;
+}
+.rodape-contato-texto{
+    color: white;
+    text-shadow: #000000 0.1em 0.1em 0.2em ;
+    margin: 35px;
+    font-size: 25px;
+}
+.vazia-rodape-contato{
+    width: 30%;
+}
+.btn-saiba-mais{
+    border: 3px;
+    background-color: #008398;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 25px;
+    border-top: 20px;
+    border-radius: 5px;
+}
+.btn-saiba-mais :hover{
+    text-decoration-color: #000160;
+    color: #000;
+    
+}
+
+    </style>
+</head>
+
+<body>
+    <!--cabeçalho do site-->
+    <header class="cabecalho">
+        <div class="box-logo">
+            <div class="titulo">
+                <img src="imagens/Cartão1a.jpg.png">
+            </div>
+            <span class="mostrar-menu">
+                <a href="#" onclick="mostrarMenu()">Menu</a>
+            </span>
+            <nav class="menu">
+                <ul class="menu-items">
+                    <li><a href="index.html" class="item-menu">Pagina Inicial</a></li>
+                    <li><a href="sobrenos.html" class="item-menu">Sobre Nós</a></li>
+                    <li><a href="notbook.html" class="item-menu">Notebook</a></li>
+                    <li><a href="computadores.html" class="item-menu">Computadores</a></li>
+                    <li><a href="empressas.html" class="item-menu">Para Empressas</a></li>
+                    <li><a href="serviços.html" class="item-menu">Serviços</a></li>
+                    <li><a href="sistemas.html" class="item-menu">Gdoor Sistemas</a></li>
+                    <li><a href="contato.html" class="item-menu">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
+        let menuAtivo = false;
+        function mostrarMenu() {
+            if (menuAtivo) {
+                document.querySelector('.menu').style.display = 'none';
+                menuAtivo = false;
+            } else {
+                document.querySelector('.menu').style.display = 'flex';
+                menuAtivo = true;
+            }
+        }
+    </script>
+    <main>
+        <div class="box">
+            <!--busca-->
+
+            <div class="inicio">
+                <div class="texto-inicio">
+                        <br><br><br><br><br><br><br><br><br>
+                        <h5>ESTAMOS AQUI PARA AJUDAR</h5>
+                        <br>
+                        <h1>Seja Bem-Vindo</h1>
+                        <br>
+                                <p>Seja qual for o problema, indicaremos a melhor solução para que seu produto volte a funcionar exatamente
+                                    como deveria. Os reparos especializados da Computador.com são realizados por especialistas de confiança
+                                    que usam somente peças originais.</p>
+
+                </div>
+                <div class="imagem-incio">
+                        <br><br><br><br><br><br><br><br>
+                        <img src="imagens/carolBiel.jpg" alt="imagem biel">
+                </div>
+
+            </div>
+            <div>
+                    <br><br>
+                <h1> Nossas Soluções:</h1>
+                <div class="solucoes-conteiner">
+                    <div class="box-solucoes">
+                        <h2 class="titulo-solucoes">Suporte Completo</h2>
+                        <img src="imagens/conserto.jpg" width="260" height="297" class="capa-solucoes">
+                        <p class="tipo-serv">Não importa se você derramou uma xícara de café ou tem uma dúvida sobre backup de dados, você pode
+                                contar com o suporte da Computador.com em qualquer ocasião.</p>
+                    </div>
+                    <div class="box-solucoes">
+                        <h2 class="titulo-solucoes">Danos Físicos</h2>
+                        <img src="imagens/reparo.jpg" width="260" height="297" class="capa-solucoes">
+                        <p class="tipo-serv">Reparos para danos acidentais, como quedas, derramamentos e sobrecargas elétricas.</p>
+                    </div>
+                    <div class="box-solucoes">
+                        <h2 class="titulo-solucoes">Sistema e Aplicativos</h2>
+                        <img src="imagens/aplicativos.jpg" width="260" height="297" class="capa-solucoes">
+                        <p class="tipo-serv">Ajuda personalizada com software para solucionar problemas mais complexos como restauração de sistema
+                                e arquivos ou na configuração de backup de dados, impressoras e muito mais.</p>
+                    </div>
+                    <div class="box-solucoes">
+                        <h2 class="titulo-solucoes">Desempenho e Segurança</h2>
+                        <img src="imagens/desempenho.jpg" width="260" height="297" class="capa-solucoes">
+                        <p class="tipo-serv">Otimizações de performance, atualizações de segurança e remoção de vírus e malware.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="inicio">
+                    
+                <div class="texto-inicio2">
+                        <br>
+                        <h3><p>Seja qual for a necessidade Nós temos a solução</p></h3><br>
+                        <p>Tudo o que você precisa, desde reparo de hardware e suporte de software até remoção de virus.</p>
+                     <br><br>
+                        <h3><p>Serviço Especializado</p></h3>
+                        <br>
+                        <p>Contamos com profissionais altamente qualificados. Há mais de 10 anos atendemos na mesma cidade 
+                            e temos a satisfação de auxiliar nossos clientes de forma individual.</p>
+                        <br>
+                        <h3><p>Suporte de Qualidade</p></h3>
+                        <br>
+                        <p> Nossa missão não acaba na entrega da solução. Estamos sempre disponíveis para auxiliar. Não importa.</p>
+                </div>
+                <div class="box-serv-imagem">
+                        <img src="imagens/carolcomp.JPG">
+                </div>
+            </div>
+            <div class="inicio3">
+                    
+                <div class="texto-inicio3">
+                        <br>
+                        <h3><p>Representante</p><br></h3><br>
+                        <img src="imagens/gdoor.jpg"><br><br>
+                        <p>GDOOR PRO- Uma solução completa para gerenciar qualquer negócio!
+                        <p>Com esse sistema você gerencia os serviços prestados pela sua empresa de forma eficiente, segura
+                                e prática: ainda emite NFS-e em mais de 500 municípios brasileiros.</p>
+                        <br>
+                        <br>
+                </div>
+                <div class="box-serv-imagem3">
+                        <h2>
+                            <br><br><br><p>100% confiança!</p>
+                            </h2><br><br>
+                            <p>Marque um atendimento conosco e receba um desconto de 100% na taxa de diagnóstico.</p>
+                            <br>
+                            <h3 class="cadcli">Agende Já Sua Visita</h3>
+                            <br>
+                            <p>
+                                <p>
+                                    <a href="contato.html" button class="btn-saiba-mais">AGENDAR</a>
+                                </p><br>
+                            </p>
+                            <form class="form">
+            
+                            </form>   
+                </div>
+            </div>
+        </div>
+    </main>
+   <!--Rodape-->
+   <div class="rodape-contato">
+        <div class="rodape-contato-texto">
+            <p>ONDE ESTAMOS</p>
+            <p>Residencial : Barão do Melgaço 1</p>
+            <p>Vilhena-Ro</p>
+        </div>
+        <div class="vazia-rodape-contato"></div>
+        <div class="rodape-contato-texto">
+            <p>CONTATO</p>
+            <img src="imagens/baseline-call-24px.svg">
+            <a href="tel:+55-69-98402-49-52" class="email">(69) 98402-4952</a>
+            <br>
+            <a href="prontoassitencia@gmail.com" class="email">prontoassistencia@gmail.com</a>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>
