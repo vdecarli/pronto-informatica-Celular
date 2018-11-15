@@ -33,45 +33,6 @@
             display: flex;
             align-items: center;
         }
-
-    .menu {
-            display: none;
-        }
-
-     @media (min-width:700px) {
-        .menu {
-                display: block;
-            }
-        }
-
-    .menu ul {
-            display: flex;
-            list-style: none;
-        }
-
-    .menu-items {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-        }
-
-     @media (min-width: 700px) {
-        .menu-items {
-                flex-direction: row;
-            }
-        }
-
-    .item-menu {
-            list-style: none;
-            padding: 10px;
-            display: inline-block;
-            color: #ffffff;
-        }
-
-    .item-menu:hover {
-            color: rgb(17, 3, 78);
-            background-color: #008398;
-        }
     .titulo-solucoes{
         font-size: 27px;
         text-align: center;
@@ -190,9 +151,45 @@
 }
 .btn-saiba-mais :hover{
     text-decoration-color: #000160;
-    color: #000;
-    
+    color: #000; 
 }
+@media (min-width:700px) {
+        .menu {
+                display: block;
+            }
+        }
+    .menu {
+            display: none;
+        }
+
+    .menu ul {
+            display: flex;
+            list-style: none;
+        }
+
+    .menu-items {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+     @media (min-width: 700px) {
+        .menu-items {
+                flex-direction: row;
+            }
+        }
+
+    .item-menu {
+            list-style: none;
+            padding: 10px;
+            display: inline-block;
+            color: #ffffff;
+        }
+
+    .item-menu:hover {
+            color: rgb(17, 3, 78);
+            background-color: #008398;
+        }
 
     </style>
 </head>
